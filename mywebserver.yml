@@ -13,11 +13,17 @@
           service:
              name: apache2
              state: started
-          when: ansible_os_family=="debian"
+          when: ansible_os_family=="Debian"
            
 
         - name: i want to install webserver 0n redHad
           yum:
              name: httpd
              state: present
-          when: ansible_os_family=="RedHad"
+          when: ansible_os_family=="RedHat"
+
+        - name: i want to start/stop apache2 on redhat node
+          service:
+             name: http
+             state: started
+          when: ansible_os_family=="RedHat"
