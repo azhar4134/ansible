@@ -24,6 +24,6 @@
 
         - name: i want to start/stop apache2 on redhat node
           service:
-             name: http
+             name: httpd
              state: started
           when: ansible_os_family=="RedHat"
