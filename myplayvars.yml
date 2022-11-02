@@ -1,0 +1,21 @@
+---
+- hosts: 172.31.31.139
+  become:
+  vars:
+      myvar1: tree
+      myvar2: wget
+      myvar3: git
+  tasks:
+      - name: i want to display vars value
+        debug:
+          msg: "{{myvar1}}"
+
+      - name: i want to install package
+        state: present
+        when: ansible_os_family=="Debian"
+         
+        loop: 
+      - "{{myvar1}}"
+      - "{{myvar2:}}"
+      - "{{myvar3:}}"
+      
