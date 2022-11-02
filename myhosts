@@ -13,3 +13,5 @@
 [webservernode:vars]
 mywebserveronubuntu= apache2
 mywebserveronredhat= httpd
+myjavapackageforubuntu= openjdk-8-jre
+myjavapackageforredhat= java-1.8.0-openjdk
