@@ -7,7 +7,8 @@
        apt:
           name: tree
           state: present
-       tags: mytree 
+       tagsss: mytree
+       ignore_error: yes 
 
        
      - name: i want to isntall wget
